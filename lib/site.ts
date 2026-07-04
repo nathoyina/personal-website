@@ -5,8 +5,7 @@ export const siteConfig = {
   description:
     "Product manager passionate about ML and LLMs. Portfolio of live projects: Chinese conversation practice for PMs, halal food finder, P6 visual maths, and more.",
   url:
-    process.env.NEXT_PUBLIC_SITE_URL ??
-    "https://personal-website-nathoyina.vercel.app",
+    process.env.NEXT_PUBLIC_SITE_URL ?? "https://nat-pm-portfolio.vercel.app",
   linkedin: "https://www.linkedin.com/in/natalie-ho-yi-na",
   github: "https://github.com/nathoyina",
   keywords: [

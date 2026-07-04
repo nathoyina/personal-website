@@ -2,6 +2,8 @@
 
 Product manager portfolio showcasing AI/ML-powered projects. Built with Next.js, optimized for demo clicks via loop engineering.
 
+Live site: [nat-pm-portfolio.vercel.app](https://nat-pm-portfolio.vercel.app)
+
 ## Quick start
 
 ```bash
