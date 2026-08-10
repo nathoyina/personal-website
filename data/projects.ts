@@ -142,7 +142,7 @@ export const projects: Project[] = [
       "The group chat never picks a restaurant. Pick your area, filter by price and cuisine, spin the wheel, and let a pun settle dinner.",
     tags: ["Singapore", "Maps", "Fun"],
     spotlight: false,
-    demoUrl: "https://eat-what.vercel.app",
+    demoUrl: "https://eat-what-smoky.vercel.app",
     githubUrl: "https://github.com/nathoyina/eat-what",
     ctaText: "Try it →",
     imageUrl: "/projects/eat-what.png",
