@@ -12,6 +12,14 @@ This portfolio uses [loop engineering](https://github.com/cobusgreyling/loop-eng
 |---------|---------|--------|-------|
 | Portfolio Triage | 1w | L1 report-only | `.cursor/skills/loop-click-triage/SKILL.md` |
 
+## Demo mode (synthetic traffic)
+
+To showcase loop engineering without waiting on real Analytics, triage reads [`data/synthetic-traffic.json`](data/synthetic-traffic.json) when `_meta.mode` is `"synthetic"`.
+
+- Findings in `STATE.md` must be labeled **synthetic**
+- Same priority order and gates apply (impressions → SEO → demo CTR)
+- Swap to live Analytics later by removing or renaming the synthetic file (or setting `_meta.mode` to `"live"` once wired)
+
 ## Goals (priority order)
 
 ### 1. Impressions & sources (primary)

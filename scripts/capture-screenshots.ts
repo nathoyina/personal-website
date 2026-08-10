@@ -6,8 +6,16 @@ import { projects } from "../data/projects";
 const OUTPUT_DIR = path.join(process.cwd(), "public", "projects");
 const VIEWPORT = { width: 1200, height: 750 };
 
+const CHROME_PATH =
+  process.platform === "darwin"
+    ? "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+    : undefined;
+
 async function captureScreenshot(url: string, outputPath: string) {
-  const browser = await puppeteer.launch({ headless: true });
+  const browser = await puppeteer.launch({
+    headless: true,
+    executablePath: CHROME_PATH,
+  });
   try {
     const page = await browser.newPage();
     await page.setViewport(VIEWPORT);

@@ -23,7 +23,7 @@ npm run build
 
 ## Projects
 
-7 open-source projects with live demos — see [data/projects.ts](data/projects.ts) for the full list.
+10 open-source projects with live demos — see [data/projects.ts](data/projects.ts) for the full list.
 
 ### Refresh project screenshots
 
@@ -75,10 +75,15 @@ After deploy, add the site to [Google Search Console](https://search.google.com/
 
 ```
 Run the loop-click-triage skill on personal-website.
-Read Vercel Analytics for page_impression (by source), then demo_click and github_click (last 7 days).
+Prefer data/synthetic-traffic.json when _meta.mode is synthetic (demo).
+Otherwise read Vercel Analytics for page_impression (by source), then demo_click and github_click.
 Focus on impressions and sources first; only analyze CTR if 7+ days of traffic exist.
 Compare against STATE.md hypotheses. Update STATE.md: High Priority, Watch List, Post-Run Critique.
 Do not edit source code — report only.
 ```
+
+### Demo with synthetic traffic
+
+[`data/synthetic-traffic.json`](data/synthetic-traffic.json) is a labeled 14-day fake traffic snapshot so you can demo the full loop (sources → SEO → CTR) without real visitors. Run the triage prompt above; STATE.md will update with synthetic findings.
 
 See [LOOP.md](LOOP.md) for full loop configuration.

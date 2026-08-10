@@ -1,0 +1,93 @@
+{
+  "_meta": {
+    "mode": "synthetic",
+    "purpose": "Demo dataset for loop-engineering homepage triage — not real traffic",
+    "period": {
+      "start": "2026-06-27",
+      "end": "2026-07-11",
+      "days": 14
+    },
+    "site": "https://nat-pm-portfolio.vercel.app",
+    "generated_at": "2026-07-11T12:40:00Z"
+  },
+  "impressions": {
+    "total": 186,
+    "by_source": [
+      { "source": "linkedin", "count": 74, "share": 0.398 },
+      { "source": "utm", "count": 41, "share": 0.22, "detail": "utm_source=linkedin&utm_campaign=launch" },
+      { "source": "direct", "count": 38, "share": 0.204 },
+      { "source": "google", "count": 18, "share": 0.097 },
+      { "source": "github", "count": 9, "share": 0.048 },
+      { "source": "twitter", "count": 4, "share": 0.022 },
+      { "source": "referral", "count": 2, "share": 0.011 }
+    ],
+    "top_campaigns": [
+      { "utm_campaign": "launch", "utm_source": "linkedin", "utm_medium": "post", "impressions": 41 },
+      { "utm_campaign": "profile", "utm_source": "linkedin", "utm_medium": "social", "impressions": 12 }
+    ]
+  },
+  "seo": {
+    "search_console": {
+      "status": "synthetic",
+      "indexed": true,
+      "sitemap_submitted": true,
+      "impressions": 62,
+      "clicks": 7,
+      "ctr": 0.113,
+      "top_queries": [
+        { "query": "natalie ho yi na", "impressions": 28, "clicks": 5 },
+        { "query": "natalie ho product manager", "impressions": 14, "clicks": 1 },
+        { "query": "halal food finder singapore", "impressions": 9, "clicks": 1 },
+        { "query": "ai product manager portfolio", "impressions": 7, "clicks": 0 },
+        { "query": "p6 maths visual", "impressions": 4, "clicks": 0 }
+      ]
+    },
+    "technical": {
+      "sitemap": "ok",
+      "robots": "ok",
+      "og_image": "ok",
+      "json_ld": "ok"
+    }
+  },
+  "engagement": {
+    "scroll_to_projects": 97,
+    "scroll_rate": 0.522
+  },
+  "demo_clicks": {
+    "total": 29,
+    "overall_ctr": 0.156,
+    "by_project": [
+      { "slug": "search-halal-food", "clicks": 9, "placement_mix": { "featured": 7, "grid": 0, "hero": 2 } },
+      { "slug": "learn-chinese", "clicks": 6, "placement_mix": { "featured": 4, "grid": 0, "hero": 2 } },
+      { "slug": "foundation-p6-math", "clicks": 5, "placement_mix": { "featured": 4, "grid": 0, "hero": 1 } },
+      { "slug": "kdrama-learn", "clicks": 4, "placement_mix": { "featured": 0, "grid": 4, "hero": 0 } },
+      { "slug": "pmos", "clicks": 2, "placement_mix": { "featured": 0, "grid": 2, "hero": 0 } },
+      { "slug": "learn-sight-words", "clicks": 3, "placement_mix": { "featured": 0, "grid": 3, "hero": 0 } }
+    ],
+    "by_placement": [
+      { "placement": "featured", "clicks": 15, "ctr_note": "spotlight strip — highest volume" },
+      { "placement": "grid", "clicks": 9, "ctr_note": "lower density; kdrama-learn punches above" },
+      { "placement": "hero", "clicks": 5, "ctr_note": "few hero CTAs; chinese + halal only" }
+    ]
+  },
+  "github_clicks": {
+    "total": 11,
+    "by_project": [
+      { "slug": "teaching-lesson-plan", "clicks": 4, "note": "no live demo — GitHub is primary CTA" },
+      { "slug": "pmos", "clicks": 3 },
+      { "slug": "learn-chinese", "clicks": 2 },
+      { "slug": "search-halal-food", "clicks": 1 },
+      { "slug": "foundation-p6-math", "clicks": 1 }
+    ]
+  },
+  "judge": {
+    "impression_baseline_met": true,
+    "days": 14,
+    "impressions": 186,
+    "gates": {
+      "min_days": 7,
+      "min_impressions": 50,
+      "ctr_analysis_allowed": true
+    }
+  }
+}

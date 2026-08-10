@@ -108,6 +108,45 @@ export const projects: Project[] = [
     ctaText: "Try it →",
     imageUrl: "/projects/learn-sight-words.png",
   },
+  {
+    slug: "p1-math-foundations",
+    title: "Number Builders",
+    tagline: "P1 addition and subtraction with column working",
+    personalNote:
+      "After P6 visual maths, I went younger — digit boxes for renaming tens and ones, streak bonuses, and 10-question sets that feel like a game.",
+    tags: ["Education", "Math", "Singapore"],
+    spotlight: false,
+    demoUrl: "https://p1-math-foundations.vercel.app",
+    githubUrl: "https://github.com/nathoyina/p1-math-foundations",
+    ctaText: "Try it →",
+    imageUrl: "/projects/p1-math-foundations.png",
+  },
+  {
+    slug: "agent-building",
+    title: "Perso Scout",
+    tagline: "Weekly research agent for personalization PMs",
+    personalNote:
+      "Personalization PMs need signal, not another newsletter. This agent finds company conference talks on YouTube, ranks them, and writes structured briefs.",
+    tags: ["Agents", "LLM", "PM Tools"],
+    spotlight: false,
+    demoUrl: "https://agent-building.vercel.app",
+    githubUrl: "https://github.com/nathoyina/agent-building",
+    ctaText: "Try it →",
+    imageUrl: "/projects/agent-building.png",
+  },
+  {
+    slug: "eat-what",
+    title: "Eat What",
+    tagline: "Spin your next makan",
+    personalNote:
+      "The group chat never picks a restaurant. Pick your area, filter by price and cuisine, spin the wheel, and let a pun settle dinner.",
+    tags: ["Singapore", "Maps", "Fun"],
+    spotlight: false,
+    demoUrl: "https://eat-what.vercel.app",
+    githubUrl: "https://github.com/nathoyina/eat-what",
+    ctaText: "Try it →",
+    imageUrl: "/projects/eat-what.png",
+  },
 ];
 
 export function getSpotlightProjects(): Project[] {
