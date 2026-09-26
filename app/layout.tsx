@@ -1,19 +1,25 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Outfit, Reenie_Beanie } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
+import { BackgroundBlobs } from "@/components/BackgroundBlobs";
+import { GrainOverlay } from "@/components/GrainOverlay";
+import { MotionRoot } from "@/components/MotionRoot";
 import { VisitTracker } from "@/components/VisitTracker";
 import { personJsonLd, websiteJsonLd } from "@/lib/seo";
 import { siteConfig } from "@/lib/site";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const outfit = Outfit({
   subsets: ["latin"],
+  variable: "--font-outfit",
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const reenieBeanie = Reenie_Beanie({
   subsets: ["latin"],
+  weight: "400",
+  variable: "--font-reenie",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -57,7 +63,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${outfit.variable} ${reenieBeanie.variable} h-full antialiased`}
     >
       <head>
         <script
@@ -73,9 +79,14 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="min-h-full flex flex-col bg-[#fafaf9] text-zinc-900">
-        <VisitTracker />
-        {children}
+      <body className="flex min-h-full flex-col font-sans text-foreground">
+        <BackgroundBlobs />
+        <div className="relative z-10 flex min-h-full flex-1 flex-col">
+          <VisitTracker />
+          <MotionRoot />
+          {children}
+        </div>
+        <GrainOverlay />
         <Analytics />
       </body>
     </html>

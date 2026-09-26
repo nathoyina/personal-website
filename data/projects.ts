@@ -17,11 +17,11 @@ export interface Project {
 export const projects: Project[] = [
   {
     slug: "learn-chinese",
-    title: "Chinese Conversation Practice",
+    title: "Chinese conversation practice",
     tagline: "Real-world Mandarin for product managers",
     personalNote:
       "I kept fumbling through sprint planning in Mandarin. So I built the practice app I wished existed.",
-    tags: ["TTS", "Education", "PM Tools"],
+    tags: ["TTS", "Education", "PM tools"],
     spotlight: true,
     spotlightOrder: 1,
     demoUrl: "https://learn-chinese-peach.vercel.app",
@@ -31,7 +31,7 @@ export const projects: Project[] = [
   },
   {
     slug: "search-halal-food",
-    title: "Halal Food Finder SG",
+    title: "Halal food finder SG",
     tagline: "Find MUIS-certified halal food near you",
     personalNote:
       "Finding halal food in SG shouldn't mean checking 5 different lists. I scraped 4,500+ MUIS certs onto one map.",
@@ -45,7 +45,7 @@ export const projects: Project[] = [
   },
   {
     slug: "foundation-p6-math",
-    title: "P6 Visual Maths",
+    title: "P6 visual maths",
     tagline: "See it, then answer it",
     personalNote:
       "A kid I tutor at my volunteering centre was drilling fractions without seeing them. Every question now has a visual model.",
@@ -59,7 +59,7 @@ export const projects: Project[] = [
   },
   {
     slug: "kdrama-learn",
-    title: "DramaK Companion",
+    title: "DramaK companion",
     tagline: "Learn Korean from the dramas you watch",
     personalNote:
       "Subtitles teach you the plot, not the language. Gemini breaks down slang, honorifics, and grammar from any line.",
@@ -72,11 +72,11 @@ export const projects: Project[] = [
   },
   {
     slug: "pmos",
-    title: "PM Learning OS",
+    title: "PM learning OS",
     tagline: "Duolingo meets case-study notebook for PMs",
     personalNote:
       "PM skills need deliberate practice, not another roadmap tool. I built a local-first cockpit for drills and reflection.",
-    tags: ["PM Tools", "Learning", "Local-first"],
+    tags: ["PM tools", "Learning", "Local-first"],
     spotlight: false,
     demoUrl: "https://pmos-xi.vercel.app",
     githubUrl: "https://github.com/nathoyina/pmos",
@@ -85,7 +85,7 @@ export const projects: Project[] = [
   },
   {
     slug: "teaching-lesson-plan",
-    title: "Classroom Slides",
+    title: "Classroom slides",
     tagline: "AI-assisted lesson planning for teachers",
     personalNote:
       "Teachers spend hours on Engage → Explore → Apply structure. Gemini drafts the content; they refine and export.",
@@ -97,7 +97,7 @@ export const projects: Project[] = [
   },
   {
     slug: "learn-sight-words",
-    title: "Sight Word Adventure",
+    title: "Sight word adventure",
     tagline: "English learning game for young readers",
     personalNote:
       "Built a level-based sight word game for young learners I tutor — placement quiz, phonics, and progress synced across devices.",
@@ -110,7 +110,7 @@ export const projects: Project[] = [
   },
   {
     slug: "p1-math-foundations",
-    title: "Number Builders",
+    title: "Number builders",
     tagline: "P1 addition and subtraction with column working",
     personalNote:
       "After P6 visual maths, I went younger — digit boxes for renaming tens and ones, streak bonuses, and 10-question sets that feel like a game.",
@@ -123,11 +123,11 @@ export const projects: Project[] = [
   },
   {
     slug: "agent-building",
-    title: "Perso Scout",
+    title: "Perso scout",
     tagline: "Weekly research agent for personalization PMs",
     personalNote:
       "Personalization PMs need signal, not another newsletter. This agent finds company conference talks on YouTube, ranks them, and writes structured briefs.",
-    tags: ["Agents", "LLM", "PM Tools"],
+    tags: ["Agents", "LLM", "PM tools"],
     spotlight: false,
     demoUrl: "https://agent-building.vercel.app",
     githubUrl: "https://github.com/nathoyina/agent-building",
@@ -136,7 +136,7 @@ export const projects: Project[] = [
   },
   {
     slug: "eat-what",
-    title: "Eat What",
+    title: "Eat what",
     tagline: "Spin your next makan",
     personalNote:
       "The group chat never picks a restaurant. Pick your area, filter by price and cuisine, spin the wheel, and let a pun settle dinner.",
