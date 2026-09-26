@@ -16,15 +16,18 @@ export default function Image() {
           flexDirection: "column",
           justifyContent: "center",
           padding: "80px",
-          background: "#fafaf9",
-          color: "#18181b",
+          background: "#FDFCF8",
+          color: "#292524",
         }}
       >
         <p
           style={{
             display: "flex",
             fontSize: 28,
-            color: "#0f766e",
+            color: "#292524",
+            background: "#FFB7B2",
+            borderRadius: 999,
+            padding: "8px 18px",
             margin: "0 0 24px 0",
           }}
         >
@@ -46,7 +49,7 @@ export default function Image() {
           style={{
             display: "flex",
             fontSize: 24,
-            color: "#52525b",
+            color: "#78716C",
             marginTop: 24,
             maxWidth: 800,
             lineHeight: 1.4,

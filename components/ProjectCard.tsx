@@ -9,6 +9,12 @@ interface ProjectCardProps {
   imagePriority?: boolean;
 }
 
+const ctaClass =
+  "inline-flex items-center rounded-full bg-peach px-5 py-2.5 text-sm font-medium text-foreground shadow-soft transition-transform hover:-translate-y-0.5 motion-reduce:transition-none motion-reduce:hover:translate-y-0";
+
+const codeLinkClass =
+  "text-sm font-medium text-foreground underline decoration-peach decoration-2 underline-offset-4 hover:decoration-foreground";
+
 export function ProjectCard({
   project,
   placement,
@@ -17,28 +23,30 @@ export function ProjectCard({
 }: ProjectCardProps) {
   if (spotlight) {
     return (
-      <article className="group overflow-hidden rounded-2xl border border-stone-200 bg-white transition-shadow hover:shadow-lg">
-        <ProjectThumbnail
-          project={project}
-          priority={imagePriority}
-          className="aspect-[16/9] w-full border-b border-stone-100"
-        />
-        <div className="p-6 md:p-8">
+      <article className="overflow-hidden rounded-card bg-background shadow-soft sm:rounded-panel">
+        <div className="p-3 sm:p-4">
+          <ProjectThumbnail
+            project={project}
+            priority={imagePriority}
+            className="aspect-[16/9] w-full"
+          />
+        </div>
+        <div className="px-6 pb-8 md:px-8">
           <div className="mb-3 flex flex-wrap gap-2">
             {project.tags.map((tag) => (
               <span
                 key={tag}
-                className="rounded-full bg-stone-100 px-2.5 py-0.5 text-xs font-medium text-stone-600"
+                className="rounded-full bg-sage px-3 py-1 text-xs font-medium text-foreground"
               >
                 {tag}
               </span>
             ))}
           </div>
-          <h3 className="text-xl font-semibold tracking-tight text-zinc-900 md:text-2xl">
+          <h3 className="card-heading text-5xl text-foreground md:text-6xl">
             {project.title}
           </h3>
-          <p className="mt-1 text-sm text-stone-500">{project.tagline}</p>
-          <p className="mt-4 text-base leading-relaxed text-zinc-600">
+          <p className="mt-2 text-sm text-muted">{project.tagline}</p>
+          <p className="mt-4 text-base leading-relaxed text-foreground">
             {project.personalNote}
           </p>
           <div className="mt-6 flex flex-wrap items-center gap-4">
@@ -49,7 +57,7 @@ export function ProjectCard({
                 project={project.slug}
                 placement={placement}
                 isDemo
-                className="inline-flex items-center rounded-lg bg-teal-700 px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-teal-800"
+                className={ctaClass}
               >
                 {project.ctaText}
               </TrackableLink>
@@ -59,7 +67,7 @@ export function ProjectCard({
               event="github_click"
               project={project.slug}
               placement={placement}
-              className="text-sm font-medium text-stone-500 transition-colors hover:text-zinc-900"
+              className={codeLinkClass}
             >
               View code →
             </TrackableLink>
@@ -70,16 +78,15 @@ export function ProjectCard({
   }
 
   return (
-    <article className="group flex flex-col overflow-hidden rounded-2xl border border-stone-200 bg-white transition-shadow hover:shadow-md">
-      <ProjectThumbnail
-        project={project}
-        className="aspect-[16/10] w-full border-b border-stone-100"
-      />
-      <div className="flex flex-1 flex-col p-5">
-        <h3 className="font-semibold tracking-tight text-zinc-900">
+    <article className="flex h-full flex-col overflow-hidden rounded-card bg-background shadow-soft">
+      <div className="p-3">
+        <ProjectThumbnail project={project} className="aspect-[16/10] w-full" />
+      </div>
+      <div className="flex flex-1 flex-col px-5 pb-5">
+        <h3 className="card-heading text-4xl text-foreground md:text-5xl">
           {project.title}
         </h3>
-        <p className="mt-2 flex-1 text-sm leading-relaxed text-zinc-600">
+        <p className="mt-3 flex-1 text-sm leading-relaxed text-foreground">
           {project.personalNote}
         </p>
         <div className="mt-4 flex flex-wrap items-center gap-3">
@@ -90,7 +97,7 @@ export function ProjectCard({
               project={project.slug}
               placement={placement}
               isDemo
-              className="inline-flex items-center rounded-lg bg-teal-700 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-teal-800"
+              className={ctaClass}
             >
               {project.ctaText}
             </TrackableLink>
@@ -100,7 +107,7 @@ export function ProjectCard({
             event="github_click"
             project={project.slug}
             placement={placement}
-            className="text-sm font-medium text-stone-500 transition-colors hover:text-zinc-900"
+            className={codeLinkClass}
           >
             code →
           </TrackableLink>

@@ -13,9 +13,7 @@ export function ProjectThumbnail({
   className = "",
 }: ProjectThumbnailProps) {
   return (
-    <div
-      className={`relative overflow-hidden bg-stone-100 ${className}`}
-    >
+    <div className={`relative overflow-hidden rounded-card bg-lavender ${className}`}>
       <Image
         src={project.imageUrl}
         alt={`Screenshot of ${project.title}`}

@@ -1,23 +1,143 @@
 @import "tailwindcss";
 
+/*
+  Digital Wellness tokens.
+  :root holds the canonical values. @theme maps them to Tailwind utilities:
+  bg-background, bg-sage, bg-lavender, bg-peach, text-foreground, text-muted,
+  font-sans (Outfit), font-accent (Reenie Beanie), shadow-soft,
+  rounded-card (2rem), rounded-panel (3rem), rounded-sheet (4rem).
+*/
 :root {
-  --background: #fafaf9;
-  --foreground: #18181b;
+  --background: #fdfcf8;
+  --sage: #e8efe8;
+  --lavender: #efedf4;
+  --peach: #ffb7b2;
+  --foreground: #292524;
+  --muted: #78716c;
 }
 
 @theme inline {
   --color-background: var(--background);
+  --color-sage: var(--sage);
+  --color-lavender: var(--lavender);
+  --color-peach: var(--peach);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  --color-muted: var(--muted);
+  --font-sans: var(--font-outfit), ui-sans-serif, system-ui, sans-serif;
+  --font-accent: var(--font-reenie), cursive;
+  --shadow-soft: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
+  --radius-card: 2rem;
+  --radius-panel: 3rem;
+  --radius-sheet: 4rem;
 }
 
 html {
+  background: var(--background);
   scroll-behavior: smooth;
+  scroll-padding-top: 6.5rem;
+  overflow-x: clip;
+}
+
+body {
+  color: var(--foreground);
+  font-family: var(--font-outfit), ui-sans-serif, system-ui, sans-serif;
+  background: transparent;
+}
+
+::selection {
+  background: var(--peach);
+  color: var(--foreground);
+}
+
+:focus-visible {
+  outline: 2px solid var(--foreground);
+  outline-offset: 3px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-transform: none;
+  letter-spacing: -0.025em;
+}
+
+.display-heading {
+  font-size: clamp(2.75rem, 1.4rem + 4.8vw, 6rem);
+  line-height: 1.08;
+  letter-spacing: -0.025em;
+  font-weight: 600;
+  text-transform: none;
+}
+
+.section-heading {
+  font-size: clamp(2rem, 1.2rem + 2.2vw, 3rem);
+  line-height: 1.12;
+  letter-spacing: -0.025em;
+  font-weight: 600;
+  text-transform: none;
+}
+
+.card-heading {
+  letter-spacing: -0.025em;
+  font-weight: 600;
+  text-transform: none;
+  line-height: 1.15;
+}
+
+.blob {
+  animation: blob-float 6s ease-in-out infinite;
+}
+
+.blob-delay-1 {
+  animation-delay: -2s;
+}
+
+.blob-delay-2 {
+  animation-delay: -4s;
+}
+
+@keyframes blob-float {
+  0%,
+  100% {
+    transform: translateY(10px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html.js-ready .reveal {
+    transition:
+      opacity 0.8s ease,
+      transform 0.8s ease;
+  }
+
+  html.js-ready .reveal:not(.is-visible) {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  html.js-ready .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .blob {
+    animation: none;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
 }
